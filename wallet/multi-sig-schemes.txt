@@ -1,0 +1,23 @@
+Single Leader Model (One higher-level signer only needs one other person to spend, but the other signers can't spend without the higher level signing)
+
+CEO (holds 3 keys)
+Associate (holds 1 key)
+Associate (holds 1 key)
+Associate (holds 1 key)
+(4 required to spend means the associates cannot spend without the CEO signing and the CEO can spend with just one other associate)
+
+Two Leader Model (Two Higher Level Signers only need one other person to send, the two lower level signers require two other people. This model prevents an Associate sending without a higher level approving.)
+CEO (holds 2 keys)
+CFO (holds 2 keys)
+Associate (holds 1 key)
+Associate (holds 1 key)
+(3 required to spend)
+
+Three Tiered Leader Model (Three tiered, highest level only needs one other person to spend, mid-high level can spend with two lower level signers or another mid-high level signer.
+CEO (holds 3 keys)
+CFO (holds 2 keys)
+CTO (holds 2 keys)
+Associate (holds 1 key)
+Associate (holds 1 key)
+Associate (holds 1 key)
+(4 required to spend allows CEO to only need one other person higher or lower level while all others require at least a higher level and two associates or two higher levels on all spends)
