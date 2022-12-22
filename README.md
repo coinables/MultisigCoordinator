@@ -1,9 +1,9 @@
-# Multisig Coordinator Server 
+# Multisig Coordination Server 
 
 A self-hosted local home server that acts as your personal Multisig Coordinator allowing any browser enabled device in your home to potentially be a multisig signing device. 
 
 Multisig Coordination Platform explained video: https://youtu.be/3Z3AGUyebRw
-Video deomonstrating the multisig coordiantion server running on transactus.org: https://youtu.be/U8XjWMSR5NM?t=130
+Video demonstrating the multisig coordiantion server running on transactus.org: https://youtu.be/U8XjWMSR5NM?t=130
 
 
 This is free and unencumbered software released into the public domain.
@@ -26,19 +26,19 @@ For more information, please refer to http://unlicense.org/
  
 NOTE: If you're on Windows tools like XAMPP and WAMP will install the above three requirements for you and you can skep to the SETUP.
 
-=================================================
+=================================================       
 ###INSTALL ON LINUX
 
 #### Installing Apache and Updating the Firewall
+```
 sudo apt update
 sudo apt install apache2
 ```
 #### Adjust the Firewall to Allow Web Traffic
 ```
 sudo ufw app list
-```
-```
-Output
+```       
+```Output
 Available applications:
   Apache
   Apache Full
@@ -64,7 +64,7 @@ Allow incoming HTTP and HTTPS traffic for this profile:
 sudo ufw allow in "Apache Full"
 ```
 Visit your IP address in any browser
-```
+
 http://your_server_ip
 
 #### Install MySQL
@@ -117,6 +117,7 @@ sudo apt install php libapache2-mod-php php-mysql
 Restart Apache Server
 ```
 sudo systemctl restart apache2
+```
 
 =================================================
 
