@@ -2,7 +2,7 @@
 
 A self-hosted local home server that acts as your personal Multisig Coordinator allowing any browser enabled device in your home to potentially be a multisig signing device. 
 
-Multisig Coordination Platform explained video: https://youtu.be/3Z3AGUyebRw
+Multisig Coordination Platform explained video: https://youtu.be/3Z3AGUyebRw       
 Video demonstrating the multisig coordiantion server running on transactus.org: https://youtu.be/U8XjWMSR5NM?t=130
 
 

@@ -9,6 +9,10 @@ $_SESSION["antibot"] = "9H4zWNUx9yK4mEYt";
 
 $userip = $_SERVER['REMOTE_ADDR'];
 
+// This is the local machine's external IP address
+$homeip = getHostByName(getHostName());
+
+//echo $homeip . dirname($_SERVER['PHP_SELF']);
 $walletlinkexists = $_GET["w"];
 
 if(strlen($walletlinkexists)===16){
@@ -185,7 +189,7 @@ body, html {
 	<div id="linkdiv" style="display: none;"><br>
 	  <h3>Wallet Link: </h3>
 <br><div style="width: 500px; margin: auto;"><input style="position: relative; float: right;" type="text" class="form-control" style="font-size: 28px;" id="walletname" value="" required> <button class="btn btn-outline-success" onclick='return null'>Copy Link</button></div>
-<br><br><b>Share this wallet link with friends to let them join.<br>After all spaces have been filled this link can also be used to view and access the wallet. <Br> Anyone with the link can join(assuming spaces are still available).</b>
+<br><br><b>Share this wallet link with anyone within your home WIFI to let them join.<br>After all spaces have been filled this link can also be used to view and access the wallet. <Br> Anyone with access to your WIFI can join(assuming spaces are still available).</b>
 	</div><br><br>
 	<div id="statusout"></div>
   </div>
@@ -207,7 +211,7 @@ body, html {
 	<button type="button" class="btn btn-outline-primary" onclick="return showWords();">Reveal Words</button>
 	<button type="button" class="btn btn-outline-danger" onclick='return confirm("Are you sure this will erase your existing wallet. BE SURE TO SAVE YOUR MNEMONIC WORDS BEFORE ATTEMPTING TO IMPORT/RECOVER!")?importWallet():null;'>Import/Recover</button>
 	<div id="mnemonicOut" class="form-group"></div>
-	Below is how your mnemonic is used to generate a public key included in a multisig. <br> Using a standard BIP49 derivation path m/49/0/0/0, the path typically used for change instead will be used <br>as an account and will increment up by one for every new wallet where you are a participant. <br> Each wallet currently allows 12 addresses max, the index paths used are in ascending order 0-11.
+	Below is how your mnemonic is used to generate a public key included in a multisig. <br> Using a standard BIP49 hardened derivation path m/49/0/0/0, the path typically used for change instead will be used <br>as an account and will increment up by one for every new wallet where you are a participant. <br> Each wallet currently allows 12 addresses max, the index paths used are in ascending order 0-11.
 	<br><br><pre style="position: relative; width:700px; margin: auto; text-align: left;">
 	let seedhex = buidl.mnemonic2SeedHex(MNEMONIC_PHRASE);
 	let ac = process.env.NEXT_USER_ACCT;
@@ -347,7 +351,7 @@ function genlink(){
 			 success: function(data){
 				
 					console.log(data);
-					document.getElementById("walletname").value = "localhost/transactus/?w="+data;
+					document.getElementById("walletname").value = "<?php echo $homeip . dirname($_SERVER['PHP_SELF']);?>/?w="+data;
 					document.getElementById("walletname").focus();
 					runchecker(data);
 			 },

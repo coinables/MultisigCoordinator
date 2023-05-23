@@ -37,33 +37,53 @@ $a10 = $_POST["a10"];
 $usraliases = [];
 
 if($p1===$uid){
+	$a1 = strip_tags($a1);
+	$a1 = mysqli_real_escape_string($conn, $a1);
 	array_push($usraliases, $a1);
 }
 if($p2===$uid){
+	$a2 = strip_tags($a2);
+	$a2 = mysqli_real_escape_string($conn, $a2);
 	array_push($usraliases, $a2);
 }
 if($p3===$uid){
+	$a3 = strip_tags($a3);
+	$a3 = mysqli_real_escape_string($conn, $a3);
 	array_push($usraliases, $a3);
 }
 if($p4===$uid){
+	$a4 = strip_tags($a4);
+	$a4 = mysqli_real_escape_string($conn, $a4);
 	array_push($usraliases, $a4);
 }
 if($p5===$uid){
+	$a5 = strip_tags($a5);
+	$a5 = mysqli_real_escape_string($conn, $a5);
 	array_push($usraliases, $a5);
 }
 if($p6===$uid){
+	$a6 = strip_tags($a6);
+	$a6 = mysqli_real_escape_string($conn, $a6);
 	array_push($usraliases, $a6);
 }
 if($p7===$uid){
+	$a7 = strip_tags($a7);
+	$a7 = mysqli_real_escape_string($conn, $a7);
 	array_push($usraliases, $a7);
 }
 if($p8===$uid){
+	$a8 = strip_tags($a8);
+	$a8 = mysqli_real_escape_string($conn, $a8);
 	array_push($usraliases, $a8);
 }
 if($p9===$uid){
+	$a9 = strip_tags($a9);
+	$a9 = mysqli_real_escape_string($conn, $a9);
 	array_push($usraliases, $a9);
 }
 if($p10===$uid){
+	$a10 = strip_tags($a10);
+	$a10 = mysqli_real_escape_string($conn, $a10);
 	array_push($usraliases, $a10);
 }
 
